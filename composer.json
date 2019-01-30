@@ -1,0 +1,43 @@
+{
+    "name": "aragorn-yang/laravel-array-redis",
+    "type": "library",
+    "description": "A laravel wrapper for M6Web/RedisMock",
+    "keywords": ["laravel", "redis", "fake", "mock", "array"],
+    "homepage": "https://github.com/aragorn-yang/laravel-array-redis",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aragorn Yang",
+            "email": "aragorn.yang@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "m6web/redis-mock": "^4.1",
+        "illuminate/redis": "^5.7",
+        "illuminate/support": "^5.7",
+        "illuminate/container": "^5.7",
+        "predis/predis": "^1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "orchestra/testbench": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AragornYang\\ArrayRedis\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AragornYang\\ArrayRedis\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AragornYang\\ArrayRedis\\ArrayRedisServiceProvider"
+            ]
+        }
+    }
+}

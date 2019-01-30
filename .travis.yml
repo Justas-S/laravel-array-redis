@@ -1,0 +1,17 @@
+language: php
+
+php:
+#  - 7.1
+  - 7.2
+  - 7.3
+  - nightly
+
+sudo: false
+
+before_install:
+  - travis_retry composer self-update
+  - composer config discard-changes true
+
+install: travis_retry composer install --no-interaction --prefer-dist --no-suggest
+
+script: vendor/bin/phpunit -c phpunit.xml --verbose
